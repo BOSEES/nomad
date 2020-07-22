@@ -3,7 +3,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import bodyParser, { text } from "body-parser";
 import cookieParser from "cookie-parser";
-import userRouter from "./routers/useRouter";
+import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
 import routes from "./routes";
