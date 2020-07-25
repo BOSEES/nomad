@@ -10,7 +10,7 @@ const search = "/search";
 
 const users = "/users";
 const userDetail = "/:id";
-const editProfile = "edit-profile";
+const editProfile = "/edit-profile";
 const changePassword = "/change-password";
 
 // videos
