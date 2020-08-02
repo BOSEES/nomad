@@ -9,8 +9,8 @@ const search = "/search";
 // users
 
 const users = "/users";
-const userDetail = "/:id";
 const editProfile = "/edit-profile";
+const userDetail = "/:id";
 const changePassword = "/change-password";
 
 // videos
