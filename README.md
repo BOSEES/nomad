@@ -8,8 +8,8 @@
 - [x] Join
 - [x] Search
 - [ ] User Detail
-- [ ] Uproad
+- [x] Uproad
 - [ ] Video Detail
-- [ ] Edit Video
-- [ ] Edit Profile
-- [ ]Change Password
+- [x] Edit Video
+- [x] Edit Profile
+- [x]Change Password

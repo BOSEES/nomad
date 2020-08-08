@@ -9,14 +9,14 @@ const search = "/search";
 // users
 
 const users = "/users";
-const editProfile = "/edit-profile";
 const userDetail = "/:id";
+const editProfile = "/edit-profile";
 const changePassword = "/change-password";
 
 // videos
 
 const videos = "/videos";
-const uproad = "/uproad";
+const upload = "/upload";
 const videoDetail = "/:id";
 const editVideo = "/:id/edit";
 const deleteVideo ="/:id/delete";
@@ -32,7 +32,7 @@ const routes = {
     editProfile: editProfile,
     changePassword: changePassword,
     videos: videos,
-    uproad: uproad,
+    upload: upload,
     videoDetail: videoDetail,
     editVideo: editVideo,
     deleteVideo: deleteVideo,

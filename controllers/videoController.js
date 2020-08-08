@@ -1,4 +1,6 @@
-export const home = (req, res) => res.render("home", {PageTitle : "home"});
+import {videosis} from "../db"
+
+export const home = (req, res) => res.render("home", {PageTitle : "home", videosis});
 
 export const search = (req, res) => {
     const {
@@ -10,8 +12,8 @@ export const search = (req, res) => {
 export const videos = (req, res) =>
     res.render("videos", {PageTitle : "Videos"});
 
-export const uproad = (req, res) =>
-     res.render("uproad", {PageTitle : "Uproad"});            //video 와 관련된 기능들을 컨트롤하기위한 컨트롤러를 모아놓은 곳임.
+export const upload = (req, res) =>
+     res.render("upload", {PageTitle : "Upload"});            //video 와 관련된 기능들을 컨트롤하기위한 컨트롤러를 모아놓은 곳임.
 
 export const videoDetail = (req, res) =>
      res.render("videoDetail", {PageTitle : "VideoDetail"});  //MODEL VIEW CONTROLLER (줄임말 MVC) 중 CONTROLLER 에 해당하는 영역
