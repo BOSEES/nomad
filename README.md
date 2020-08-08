@@ -7,9 +7,9 @@
 - [x] Login
 - [x] Join
 - [x] Search
-- [ ] User Detail
+- [x] User Detail
 - [x] Uproad
-- [ ] Video Detail
+- [x] Video Detail
 - [x] Edit Video
 - [x] Edit Profile
 - [x]Change Password
