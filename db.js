@@ -4,14 +4,14 @@ import "./models/Video";
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL,{
-    useUnifiedTopology: true,
     useNewUrlParser: true,
-    useFindAndModify: false,  //일단 그냥 쓰자.
+    useFindAndModify: false,
+    useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
 
-const handleOpen = () => conesole.log("connection MongoDB");
+const handleOpen = () => console.log("Nice connection MongoDB");
 const handleError = (error) => console.log(`Error Connection MongoDB:${error}`);
 
 db.once("open", handleOpen);
