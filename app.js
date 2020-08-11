@@ -11,6 +11,7 @@ import routes from "./routes";
 
 const app = express(); //express()함수를 를 상수 app에 대입함. 거의 공식과도 같은 룰이다
 app.set("view engine", "pug");
+app.use("/uploads", express.static("uploads"));// express.static() 을 이용해 디렉토리에다가 file을 보내주는 미들웨어다.
 app.use(helmet());  // 보안의 용이한 미들웨어다. 서버를 구축하기 전에 무조건 곁들여주면 좋다.
 app.use(bodyParser.json());   // 사용자가 웹사이트로 전달하는 정보를 검사하는 미들웨어이다. requsest 정보에서 form 이나 json 형태로 된 body를 검사함
 app.use(bodyParser.urlencoded({extended: true})); // 사용자가 웹사이트로 전달하는 정보를 검사하는 미들웨어이다. requsest 정보에서 form 이나 json 형태로 된 body를 검사함

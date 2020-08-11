@@ -40,11 +40,42 @@ export const postUpload = async(req, res) => {
 }
 
 
-export const videoDetail = (req, res) =>
-     res.render("videoDetail", {PageTitle : "VideoDetail"});  //MODEL VIEW CONTROLLER (줄임말 MVC) 중 CONTROLLER 에 해당하는 영역
+export const videoDetail = async(req, res) => {
+    const {
+        params: {id}
+    } = req;
+    try {
+        const video = await Video.findById(id);
+        res.render("videoDetail", {PageTitle:"Video Detail", video});
+    } catch (error) {
+        res.render(routes.home);
+    }
+}
 
-export const editVideo = (req, res) =>
-    res.render("editVideo", {PageTitle : "EditVideo"});
+export const getEditVideo = async(req, res) => {
+    const {
+        params:{id},
+    } = req;
+    try {
+        const video = await Video.findById(id);
+        res.render("editVideo", {PageTitle: `Edit ${video.title}`, video});
+    } catch (error) {
+        res.redirect(routes.home);
+    }
+};
+
+export const postEditVideo = async(req, res) => {
+    const {
+        params: {id},
+        body:{title,description},
+    } = req;
+    try {
+        await Video.findByIdAndUpdate({id},{title,description});
+        res.redirect(routes.videoDetail(id));
+    } catch (error) {
+        res.redirect(routes.home);
+    }
+}
 
 export const deleteVideo = (req, res) =>
     res.render("deleteVideo", {PageTitle : "DeleteVideo"});
